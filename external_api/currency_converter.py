@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_KEY = os.getenv('API_KEY')
-BASE_URL = "https://api.apilayer.com/exchangerates_data/convert?to={to}&from={from}&amount={amount}"
+BASE_URL = "https://api.apilayer.com/exchangerates_data/live?base=USD&symbols=EUR,GBP"
 
 
 def convert_to_rubles(currency, amount):
@@ -31,8 +31,8 @@ print(f"API_KEY: {API_KEY}")
 """Проверка получения API ключа"""
 
 """Тестовый запрос к API для проверки корректности"""
-url = "https://api.apilayer.com/exchangerates_data/convert?to={to}&from={from}&amount={amount}"
-headers = {"apikey": API_KEY}
-response = requests.get(url, headers=headers)
-print(f"Статус-код: {response.status_code}")
-print(f"Ответ: {response.text}")
+# url = "https://api.apilayer.com/exchangerates_data/live?base=USD&symbols=EUR,GBP"
+# headers = {"apikey": API_KEY}
+# response = requests.get(url, headers=headers)
+# print(f"Статус-код: {response.status_code}")
+# print(f"Ответ: {response.text}")

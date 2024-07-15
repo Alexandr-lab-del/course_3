@@ -24,5 +24,6 @@ def main():
             print("Некорректные данные транзакции")
 
 
+print(convert_to_rubles())
 if __name__ == "__main__":
     main()

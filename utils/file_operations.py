@@ -15,3 +15,4 @@ def read_transactions(file_path):
         except json.JSONDecodeError:
             print("Ошибка чтения JSON файла")
     return transactions
+
